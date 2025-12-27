@@ -16,10 +16,6 @@ Fullscreen image with inset text
 Class: `exp-layout exp-layout--full`
 Use: image fills the screen; text block sits over it (top-left inset).
 
-Uneven split (image heavier)
-Class: `exp-layout exp-layout--split-uneven`
-Use: 3/2 column split for a more image-dominant page.
-
 Uneven split (3/2 columns, image left)
 Class: `exp-layout exp-layout--split-uneven-3-2-left`
 Use: 3/2 split with image left, text right.
