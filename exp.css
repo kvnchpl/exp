@@ -13,8 +13,8 @@
   --min-image-height-mobile: 40vh;
   --size-viewport-height: 100dvh;
   --size-viewport-width: 100dvw;
-  --space-item-pad: 24px;
-  --space-item-pad-compact: 16px;
+  --space-item-pad: 48px;
+  --space-item-pad-compact: 32px;
   --space-item-pad-half: calc(var(--space-item-pad) / 2);
   --space-item-pad-compact-half: calc(var(--space-item-pad-compact) / 2);
   --space-header-gap: 12px;
