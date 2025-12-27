@@ -52,6 +52,11 @@ a:focus-visible {
   padding: 48px 24px 72px;
 }
 
+.exp-page .exp-shell {
+  max-width: none;
+  padding: 0;
+}
+
 .exp-header {
   margin-bottom: 36px;
 }
@@ -93,7 +98,7 @@ a:focus-visible {
 .exp-layout--split-left,
 .exp-layout--split-right {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  min-height: 60vh;
+  min-height: 100vh;
 }
 
 .exp-layout--split-left .exp-image {
@@ -117,13 +122,13 @@ a:focus-visible {
 .exp-layout--split-left .exp-image img,
 .exp-layout--split-right .exp-image img {
   height: 100%;
-  min-height: 60vh;
+  min-height: 100vh;
   object-fit: cover;
 }
 
 .exp-layout--full {
   position: relative;
-  min-height: 70vh;
+  min-height: 100vh;
 }
 
 .exp-layout--full .exp-image {
@@ -148,11 +153,15 @@ a:focus-visible {
 
 .exp-layout--split-uneven {
   grid-template-columns: 3fr 2fr;
-  min-height: 60vh;
+  min-height: 100vh;
 }
 
 .exp-layout--stacked {
   grid-template-columns: 1fr;
+}
+
+.exp-layout .exp-block {
+  padding: 32px;
 }
 
 .exp-image {
@@ -170,7 +179,8 @@ a:focus-visible {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 24px;
+  margin-bottom: 0;
+  padding: 24px;
   font-size: var(--font-size-small);
   color: var(--color-muted);
 }
@@ -185,7 +195,8 @@ a:focus-visible {
 .exp-article h1 {
   font-size: clamp(1.8rem, 4vw, 2.4rem);
   font-weight: 400;
-  margin: 0 0 16px;
+  margin: 0;
+  padding: 0 24px 16px;
 }
 
 .exp-article p {
@@ -221,6 +232,10 @@ a:focus-visible {
 
   .exp-layout--full .exp-block {
     margin: 16px;
+  }
+
+  .exp-layout .exp-block {
+    padding: 20px 18px;
   }
 }
 
