@@ -15,6 +15,8 @@
   --size-viewport-width: 100dvw;
   --space-item-pad: 24px;
   --space-item-pad-compact: 16px;
+  --space-item-pad-half: calc(var(--space-item-pad) / 2);
+  --space-item-pad-compact-half: calc(var(--space-item-pad-compact) / 2);
   --space-header-gap: 12px;
   --space-header-pad: 24px;
   --space-page: 48px;
@@ -108,6 +110,7 @@ a:focus-visible {
   display: grid;
   gap: 0;
   align-items: stretch;
+  padding: var(--space-item-pad-half);
 }
 
 .exp-layout--index {
@@ -191,7 +194,7 @@ a:focus-visible {
 
 .exp-layout .exp-image,
 .exp-layout .exp-block {
-  padding: var(--space-item-pad);
+  padding: var(--space-item-pad-half);
 }
 
 .exp-image {
@@ -255,7 +258,7 @@ a:focus-visible {
 
   .exp-layout .exp-image,
   .exp-layout .exp-block {
-    padding: var(--space-item-pad-compact);
+    padding: var(--space-item-pad-compact-half);
   }
 
 }
