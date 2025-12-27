@@ -109,15 +109,6 @@ a:focus-visible {
   border: 1px solid var(--color-border);
 }
 
-.exp-footer {
-  margin-top: 44px;
-  font-size: var(--font-size-small);
-  color: var(--color-muted);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 18px;
-}
-
 .exp-page-header {
   display: flex;
   align-items: center;
