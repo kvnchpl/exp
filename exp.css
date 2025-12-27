@@ -7,7 +7,6 @@
   --font-size-base: 18px;
   --font-size-title: clamp(2.2rem, 6vw, 3.2rem);
   --font-size-subtitle: clamp(1rem, 2.4vw, 1.3rem);
-  --font-size-section: 0.95rem;
   --font-size-small: 0.9rem;
   --line-height: 1.7;
   --transition-fast: 0.2s ease;
@@ -84,20 +83,6 @@ a:focus-visible {
   padding-top: 8px;
 }
 
-.exp-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.exp-list li {
-  margin: 0 0 10px;
-}
-
-.exp-list li:last-child {
-  margin-bottom: 0;
-}
-
 .exp-image {
   margin: 0;
 }
@@ -138,11 +123,6 @@ a:focus-visible {
 @media (max-width: 860px) {
   .exp-flow {
     grid-template-columns: 1fr;
-  }
-
-  .exp-footer {
-    flex-direction: column;
-    align-items: flex-start;
   }
 }
 
