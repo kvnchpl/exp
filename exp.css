@@ -196,6 +196,18 @@ a:focus-visible {
   .exp-flow {
     grid-template-columns: 1fr;
   }
+}
+
+@media (max-width: 640px) {
+  .exp-shell {
+    padding: 36px 18px 56px;
+  }
+
+  .exp-page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
 
   .exp-layout--split-left,
   .exp-layout--split-right,
@@ -225,17 +237,5 @@ a:focus-visible {
 
   .exp-layout .exp-block {
     padding: 20px 18px;
-  }
-}
-
-@media (max-width: 640px) {
-  .exp-shell {
-    padding: 36px 18px 56px;
-  }
-
-  .exp-page-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
   }
 }
