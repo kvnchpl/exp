@@ -52,6 +52,11 @@ a:focus-visible {
   padding: 48px 24px 72px;
 }
 
+.exp-home .exp-shell {
+  max-width: none;
+  padding: 0;
+}
+
 .exp-page .exp-shell {
   max-width: none;
   padding: 0;
