@@ -164,6 +164,9 @@ a:focus-visible {
   height: auto;
   max-width: 100dvw;
   max-height: 100dvh;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .exp-page-header {
