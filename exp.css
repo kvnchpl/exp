@@ -17,9 +17,6 @@
   --min-image-height-mobile: 40vh;
   --size-viewport-height: 100dvh;
   --size-viewport-width: 100dvw;
-  --space-block: 32px;
-  --space-block-compact: 20px;
-  --space-block-compact-x: 18px;
   --space-header-gap: 12px;
   --space-header-pad: 24px;
   --space-page: 48px;
@@ -75,11 +72,14 @@ a:focus-visible {
   padding: 0;
 }
 
+.exp-header {
+  padding: var(--space-title-pad);
+}
+
 .exp-title {
   font-size: var(--font-size-title);
   margin: 0;
   font-weight: 400;
-  padding: var(--space-title-pad);
 }
 
 .exp-page-header {
@@ -190,9 +190,6 @@ a:focus-visible {
   grid-template-columns: 1fr;
 }
 
-.exp-layout .exp-block {
-  padding: var(--space-block);
-}
 
 .exp-image {
   margin: 0;
@@ -253,7 +250,4 @@ a:focus-visible {
     min-height: var(--min-image-height-mobile);
   }
 
-  .exp-layout .exp-block {
-    padding: var(--space-block-compact) var(--space-block-compact-x);
-  }
 }
