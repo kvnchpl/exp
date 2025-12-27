@@ -6,7 +6,6 @@
   --font-body: "Times New Roman", Times, serif;
   --font-size-base: 18px;
   --font-size-title: clamp(2.2rem, 6vw, 3.2rem);
-  --font-size-subtitle: clamp(1rem, 2.4vw, 1.3rem);
   --font-size-small: 0.9rem;
   --line-height: 1.7;
   --transition-fast: 0.2s ease;
@@ -71,13 +70,6 @@ a:focus-visible {
   font-weight: 400;
 }
 
-.exp-flow {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px 36px;
-  align-items: start;
-}
-
 .exp-layout {
   display: grid;
   gap: 24px;
@@ -122,11 +114,6 @@ a:focus-visible {
   height: 100%;
   min-height: 100dvh;
   object-fit: cover;
-}
-
-.exp-layout--split-uneven {
-  grid-template-columns: 3fr 2fr;
-  min-height: 100dvh;
 }
 
 .exp-layout--split-uneven-3-2-left,
@@ -211,9 +198,6 @@ a:focus-visible {
 }
 
 @media (max-width: 860px) {
-  .exp-flow {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 640px) {
@@ -227,7 +211,6 @@ a:focus-visible {
 
   .exp-layout--split-left,
   .exp-layout--split-right,
-  .exp-layout--split-uneven,
   .exp-layout--split-uneven-3-2-left,
   .exp-layout--split-uneven-3-2-right,
   .exp-layout--split-uneven-2-3-left,
@@ -239,14 +222,12 @@ a:focus-visible {
 
   .exp-layout--split-left .exp-image,
   .exp-layout--split-right .exp-image,
-  .exp-layout--split-uneven .exp-image,
   .exp-layout--split-uneven-3-2-left .exp-image,
   .exp-layout--split-uneven-3-2-right .exp-image,
   .exp-layout--split-uneven-2-3-left .exp-image,
   .exp-layout--split-uneven-2-3-right .exp-image,
   .exp-layout--split-left .exp-block,
   .exp-layout--split-right .exp-block,
-  .exp-layout--split-uneven .exp-block,
   .exp-layout--split-uneven-3-2-left .exp-block,
   .exp-layout--split-uneven-3-2-right .exp-block,
   .exp-layout--split-uneven-2-3-left .exp-block,
@@ -256,7 +237,6 @@ a:focus-visible {
 
   .exp-layout--split-left .exp-image img,
   .exp-layout--split-right .exp-image img,
-  .exp-layout--split-uneven .exp-image img,
   .exp-layout--split-uneven-3-2-left .exp-image img,
   .exp-layout--split-uneven-3-2-right .exp-image img,
   .exp-layout--split-uneven-2-3-left .exp-image img,

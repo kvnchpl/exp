@@ -19,7 +19,7 @@ Use these classes on a container with `exp-layout`.
 ```html
 <section class="exp-layout exp-layout--split-left">
   <figure class="exp-image">
-    <img src="../i/xxxxx.webp" alt="abstract mark" />
+    <img src="../i/xxxxx.webp" />
   </figure>
   <div class="exp-block">
     <p>Text goes here…</p>
