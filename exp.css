@@ -19,7 +19,7 @@
   --space-item-pad-half: calc(var(--space-item-pad) / 2);
   --space-item-pad-compact-half: calc(var(--space-item-pad-compact) / 2);
   --space-header-gap: 12px;
-  --space-header-pad: 24px;
+  --space-header-pad: 48px;
   --space-page: 48px;
   --space-page-bottom: 72px;
   --space-page-x: 24px;
