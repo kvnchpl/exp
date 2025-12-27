@@ -5,19 +5,18 @@ if (bgColor) {
   body.style.backgroundColor = bgColor;
 }
 
-const svgTemplates = [
-  "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 280 180' fill='none' stroke='#111' stroke-width='2'><rect x='18' y='18' width='244' height='144'/><circle cx='140' cy='90' r='34'/></svg>",
-  "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 280 180' fill='none' stroke='#111' stroke-width='2'><path d='M20 30h240M40 70h200M60 110h160M80 150h120'/></svg>",
-  "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 280 180' fill='none' stroke='#111' stroke-width='2'><path d='M30 150L140 30l110 120'/><circle cx='60' cy='60' r='16'/></svg>",
-  "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 280 180' fill='none' stroke='#111' stroke-width='2'><rect x='30' y='40' width='90' height='100'/><rect x='160' y='20' width='90' height='140'/></svg>",
-  "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 280 180' fill='none' stroke='#111' stroke-width='2'><path d='M20 90h240'/><path d='M60 30v120M140 30v120M220 30v120'/></svg>",
-  "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 280 180' fill='none' stroke='#111' stroke-width='2'><circle cx='70' cy='60' r='30'/><circle cx='210' cy='120' r='40'/></svg>",
+const imageSources = [
+  "i/mark-01.svg",
+  "i/mark-02.svg",
+  "i/mark-03.svg",
+  "i/mark-04.svg",
+  "i/mark-05.svg",
+  "i/mark-06.svg",
 ];
 
 const makeImage = () => {
-  const svg = svgTemplates[Math.floor(Math.random() * svgTemplates.length)];
   const img = document.createElement("img");
-  img.src = `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
+  img.src = imageSources[Math.floor(Math.random() * imageSources.length)];
   img.alt = "abstract mark";
   img.loading = "lazy";
   return img;
