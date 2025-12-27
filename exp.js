@@ -5,13 +5,14 @@ if (bgColor) {
   body.style.backgroundColor = bgColor;
 }
 
+const imageRoot = window.location.pathname.includes("/x/") ? "../i/" : "i/";
 const imageSources = [
-  "i/mark-01.svg",
-  "i/mark-02.svg",
-  "i/mark-03.svg",
-  "i/mark-04.svg",
-  "i/mark-05.svg",
-  "i/mark-06.svg",
+  `${imageRoot}mark-01.svg`,
+  `${imageRoot}mark-02.svg`,
+  `${imageRoot}mark-03.svg`,
+  `${imageRoot}mark-04.svg`,
+  `${imageRoot}mark-05.svg`,
+  `${imageRoot}mark-06.svg`,
 ];
 
 const makeImage = () => {
