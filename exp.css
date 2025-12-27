@@ -125,26 +125,6 @@ a:focus-visible {
   min-height: var(--size-viewport-height);
 }
 
-.exp-layout--split-left .exp-image {
-  grid-column: 1;
-}
-
-.exp-layout--split-left .exp-block {
-  grid-column: 2;
-  padding-top: 0;
-}
-
-.exp-layout--split-right .exp-image {
-  grid-column: 2;
-  grid-row: 1;
-}
-
-.exp-layout--split-right .exp-block {
-  grid-column: 1;
-  grid-row: 1;
-  padding-top: 0;
-}
-
 .exp-layout--split-left .exp-image img,
 .exp-layout--split-right .exp-image img {
   height: 100%;
@@ -164,25 +144,29 @@ a:focus-visible {
   min-height: var(--size-viewport-height);
 }
 
-.exp-layout--split-uneven-3-2-left .exp-image,
-.exp-layout--split-uneven-2-3-left .exp-image {
+:is(.exp-layout--split-left,
+  .exp-layout--split-uneven-3-2-left,
+  .exp-layout--split-uneven-2-3-left) .exp-image {
   grid-column: 1;
 }
 
-.exp-layout--split-uneven-3-2-left .exp-block,
-.exp-layout--split-uneven-2-3-left .exp-block {
+:is(.exp-layout--split-left,
+  .exp-layout--split-uneven-3-2-left,
+  .exp-layout--split-uneven-2-3-left) .exp-block {
   grid-column: 2;
   padding-top: 0;
 }
 
-.exp-layout--split-uneven-3-2-right .exp-image,
-.exp-layout--split-uneven-2-3-right .exp-image {
+:is(.exp-layout--split-right,
+  .exp-layout--split-uneven-3-2-right,
+  .exp-layout--split-uneven-2-3-right) .exp-image {
   grid-column: 2;
   grid-row: 1;
 }
 
-.exp-layout--split-uneven-3-2-right .exp-block,
-.exp-layout--split-uneven-2-3-right .exp-block {
+:is(.exp-layout--split-right,
+  .exp-layout--split-uneven-3-2-right,
+  .exp-layout--split-uneven-2-3-right) .exp-block {
   grid-column: 1;
   grid-row: 1;
   padding-top: 0;
@@ -232,18 +216,12 @@ a:focus-visible {
     min-height: auto;
   }
 
-  .exp-layout--split-left .exp-image,
-  .exp-layout--split-right .exp-image,
-  .exp-layout--split-uneven-3-2-left .exp-image,
-  .exp-layout--split-uneven-3-2-right .exp-image,
-  .exp-layout--split-uneven-2-3-left .exp-image,
-  .exp-layout--split-uneven-2-3-right .exp-image,
-  .exp-layout--split-left .exp-block,
-  .exp-layout--split-right .exp-block,
-  .exp-layout--split-uneven-3-2-left .exp-block,
-  .exp-layout--split-uneven-3-2-right .exp-block,
-  .exp-layout--split-uneven-2-3-left .exp-block,
-  .exp-layout--split-uneven-2-3-right .exp-block {
+  :is(.exp-layout--split-left,
+    .exp-layout--split-right,
+    .exp-layout--split-uneven-3-2-left,
+    .exp-layout--split-uneven-3-2-right,
+    .exp-layout--split-uneven-2-3-left,
+    .exp-layout--split-uneven-2-3-right) :is(.exp-image, .exp-block) {
     grid-column: auto;
   }
 
