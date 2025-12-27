@@ -68,6 +68,7 @@ a:focus-visible {
   font-size: var(--font-size-title);
   margin: 0;
   font-weight: 400;
+  padding: 32px;
 }
 
 .exp-layout {
