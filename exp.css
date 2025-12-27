@@ -124,30 +124,6 @@ a:focus-visible {
   object-fit: cover;
 }
 
-.exp-layout--full {
-  position: relative;
-  min-height: 100dvh;
-}
-
-.exp-layout--full .exp-image {
-  position: absolute;
-  inset: 0;
-}
-
-.exp-layout--full .exp-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.exp-layout--full .exp-block {
-  position: relative;
-  max-width: 360px;
-  padding: 16px 18px;
-  margin: 24px;
-  background: #ffffff;
-}
-
 .exp-layout--split-uneven {
   grid-template-columns: 3fr 2fr;
   min-height: 100dvh;
@@ -286,10 +262,6 @@ a:focus-visible {
   .exp-layout--split-uneven-2-3-left .exp-image img,
   .exp-layout--split-uneven-2-3-right .exp-image img {
     min-height: 40vh;
-  }
-
-  .exp-layout--full .exp-block {
-    margin: 16px;
   }
 
   .exp-layout .exp-block {

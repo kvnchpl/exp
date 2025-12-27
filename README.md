@@ -8,7 +8,6 @@ Use these classes on a container with `exp-layout`.
 | --- | --- | --- |
 | Split image left / text right | `exp-layout exp-layout--split-left` | Two-column layout, image on the left, text on the right. |
 | Split image right / text left | `exp-layout exp-layout--split-right` | Two-column layout, image on the right, text on the left. |
-| Fullscreen image with inset text | `exp-layout exp-layout--full` | Image fills the screen; text block sits over it (top-left inset). |
 | Uneven split (3/2, image left) | `exp-layout exp-layout--split-uneven-3-2-left` | 3/2 split with image left, text right. |
 | Uneven split (3/2, image right) | `exp-layout exp-layout--split-uneven-3-2-right` | 3/2 split with image right, text left. |
 | Uneven split (2/3, image left) | `exp-layout exp-layout--split-uneven-2-3-left` | 2/3 split with image left, text right. |
