@@ -101,10 +101,12 @@ a:focus-visible {
 
 .exp-layout--split-right .exp-image {
   grid-column: 2;
+  grid-row: 1;
 }
 
 .exp-layout--split-right .exp-block {
   grid-column: 1;
+  grid-row: 1;
   padding-top: 0;
 }
 
