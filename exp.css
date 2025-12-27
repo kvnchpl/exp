@@ -1,30 +1,33 @@
 :root {
   --color-bg: #ffffff;
-  --color-text: #111111;
-  --color-muted: #666666;
   --color-link: #1a0dab;
+  --color-muted: #666666;
+  --color-text: #111111;
+
   --font-body: "Times New Roman", Times, serif;
   --font-size-base: 18px;
-  --font-size-title: clamp(2.2rem, 6vw, 3.2rem);
   --font-size-small: 0.9rem;
-  --line-height: 1.7;
-  --transition-fast: 0.2s ease;
-  --layout-max-width: 960px;
-  --space-page: 48px;
-  --space-page-x: 24px;
-  --space-page-bottom: 72px;
-  --space-block: 32px;
-  --space-block-compact: 20px;
-  --space-block-compact-x: 18px;
-  --space-header-pad: 24px;
-  --space-header-gap: 12px;
-  --space-title-pad: 32px;
+  --font-size-title: clamp(2.2rem, 6vw, 3.2rem);
+
   --gap-layout: 24px;
-  --gap-layout-wide-row: 28px;
   --gap-layout-wide-col: 36px;
+  --gap-layout-wide-row: 28px;
+  --layout-max-width: 960px;
+  --line-height: 1.7;
   --min-image-height-mobile: 40vh;
   --size-viewport-height: 100dvh;
   --size-viewport-width: 100dvw;
+  --space-block: 32px;
+  --space-block-compact: 20px;
+  --space-block-compact-x: 18px;
+  --space-header-gap: 12px;
+  --space-header-pad: 24px;
+  --space-page: 48px;
+  --space-page-bottom: 72px;
+  --space-page-x: 24px;
+  --space-title-pad: 32px;
+
+  --transition-fast: 0.2s ease;
 }
 
 * {
@@ -66,11 +69,7 @@ a:focus-visible {
   padding: var(--space-page) var(--space-page-x) var(--space-page-bottom);
 }
 
-.exp-home .exp-shell {
-  max-width: none;
-  padding: 0;
-}
-
+.exp-home .exp-shell,
 .exp-page .exp-shell {
   max-width: none;
   padding: 0;
@@ -81,6 +80,28 @@ a:focus-visible {
   margin: 0;
   font-weight: 400;
   padding: var(--space-title-pad);
+}
+
+.exp-page-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0;
+  padding: var(--space-header-pad);
+  font-size: var(--font-size-small);
+  color: var(--color-muted);
+}
+
+.exp-return {
+  color: var(--color-text);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.exp-article p {
+  margin: 0;
 }
 
 .exp-layout {
@@ -186,28 +207,6 @@ a:focus-visible {
   pointer-events: none;
   user-select: none;
   -webkit-user-drag: none;
-}
-
-.exp-page-header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 0;
-  padding: var(--space-header-pad);
-  font-size: var(--font-size-small);
-  color: var(--color-muted);
-}
-
-.exp-return {
-  color: var(--color-text);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.exp-article p {
-  margin: 0;
 }
 
 @media (max-width: 640px) {
