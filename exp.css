@@ -18,7 +18,7 @@
 
 body {
   margin: 0;
-  min-height: 100vh;
+  min-height: 100dvh;
   font-family: var(--font-body);
   font-size: var(--font-size-base);
   line-height: var(--line-height);
@@ -87,7 +87,6 @@ a:focus-visible {
 .exp-layout--split-left,
 .exp-layout--split-right {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  min-height: 100vh;
   min-height: 100dvh;
 }
 
@@ -112,14 +111,12 @@ a:focus-visible {
 .exp-layout--split-left .exp-image img,
 .exp-layout--split-right .exp-image img {
   height: 100%;
-  min-height: 100vh;
   min-height: 100dvh;
   object-fit: cover;
 }
 
 .exp-layout--full {
   position: relative;
-  min-height: 100vh;
   min-height: 100dvh;
 }
 
@@ -144,7 +141,6 @@ a:focus-visible {
 
 .exp-layout--split-uneven {
   grid-template-columns: 3fr 2fr;
-  min-height: 100vh;
   min-height: 100dvh;
 }
 
