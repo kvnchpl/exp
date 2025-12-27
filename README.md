@@ -20,6 +20,22 @@ Uneven split (image heavier)
 Class: `exp-layout exp-layout--split-uneven`
 Use: 3/2 column split for a more image-dominant page.
 
+Uneven split (3/2 columns, image left)
+Class: `exp-layout exp-layout--split-uneven-3-2-left`
+Use: 3/2 split with image left, text right.
+
+Uneven split (3/2 columns, image right)
+Class: `exp-layout exp-layout--split-uneven-3-2-right`
+Use: 3/2 split with image right, text left.
+
+Uneven split (2/3 columns, image left)
+Class: `exp-layout exp-layout--split-uneven-2-3-left`
+Use: 2/3 split with image left, text right.
+
+Uneven split (2/3 columns, image right)
+Class: `exp-layout exp-layout--split-uneven-2-3-right`
+Use: 2/3 split with image right, text left.
+
 Stacked
 Class: `exp-layout exp-layout--stacked`
 Use: single column; image(s) and text stack vertically.
