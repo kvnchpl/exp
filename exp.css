@@ -33,7 +33,7 @@
 
 body {
   margin: 0;
-  min-height: 100dvh;
+  min-height: var(--size-viewport-height);
   font-family: var(--font-body);
   font-size: var(--font-size-base);
   line-height: var(--line-height);
@@ -93,13 +93,13 @@ a:focus-visible {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--gap-layout-wide-row) var(--gap-layout-wide-col);
   align-items: start;
-  min-height: 100dvh;
+  min-height: var(--size-viewport-height);
 }
 
 .exp-layout--split-left,
 .exp-layout--split-right {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  min-height: 100dvh;
+  min-height: var(--size-viewport-height);
 }
 
 .exp-layout--split-left .exp-image {
@@ -125,20 +125,20 @@ a:focus-visible {
 .exp-layout--split-left .exp-image img,
 .exp-layout--split-right .exp-image img {
   height: 100%;
-  min-height: 100dvh;
+  min-height: var(--size-viewport-height);
   object-fit: cover;
 }
 
 .exp-layout--split-uneven-3-2-left,
 .exp-layout--split-uneven-3-2-right {
   grid-template-columns: 3fr 2fr;
-  min-height: 100dvh;
+  min-height: var(--size-viewport-height);
 }
 
 .exp-layout--split-uneven-2-3-left,
 .exp-layout--split-uneven-2-3-right {
   grid-template-columns: 2fr 3fr;
-  min-height: 100dvh;
+  min-height: var(--size-viewport-height);
 }
 
 .exp-layout--split-uneven-3-2-left .exp-image,
@@ -181,8 +181,8 @@ a:focus-visible {
   display: block;
   width: 100%;
   height: auto;
-  max-width: 100dvw;
-  max-height: 100dvh;
+  max-width: var(--size-viewport-width);
+  max-height: var(--size-viewport-height);
   pointer-events: none;
   user-select: none;
   -webkit-user-drag: none;
