@@ -78,10 +78,6 @@ a:focus-visible {
   align-items: start;
 }
 
-.exp-block {
-  padding-top: 8px;
-}
-
 .exp-layout {
   display: grid;
   gap: 24px;
