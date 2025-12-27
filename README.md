@@ -51,5 +51,5 @@ Basic markup pattern
 
 Notes
 - Use `exp-image` for image containers and `exp-block` for text.
-- Split layouts are full-height (`100dvh`) and go full-width on the `x/` pages.
+- Split layouts are full-height (`100dvh`) and go full-width
 - On smaller screens, split layouts collapse to a single column.
