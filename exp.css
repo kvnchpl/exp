@@ -3,7 +3,6 @@
   --color-text: #111111;
   --color-muted: #666666;
   --color-link: #1a0dab;
-  --color-border: #dddddd;
   --font-body: "Times New Roman", Times, serif;
   --font-size-base: 18px;
   --font-size-title: clamp(2.2rem, 6vw, 3.2rem);
@@ -169,7 +168,6 @@ a:focus-visible {
   display: block;
   width: 100%;
   height: auto;
-  border: 1px solid var(--color-border);
 }
 
 .exp-page-header {
