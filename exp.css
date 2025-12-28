@@ -110,6 +110,7 @@ a:focus-visible {
 .exp-block audio {
   display: block;
   width: 100%;
+  margin-bottom: var(--space-item-pad-half);
 }
 
 .exp-layout {
