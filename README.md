@@ -3,21 +3,19 @@
 ## Layout Templates
 
 Use these classes on a container with `exp-layout`.
+For split layouts, the first child will render in the left column and the second in the right. On smaller screens, split layouts collapse to a single column.
 
 | Layout | Class | Use |
 | --- | --- | --- |
-| Split image left / text right | `exp-layout exp-layout--split-left` | Two-column layout, image on the left, text on the right. |
-| Split image right / text left | `exp-layout exp-layout--split-right` | Two-column layout, image on the right, text on the left. |
-| Uneven split (3/2, image left) | `exp-layout exp-layout--split-uneven-3-2-left` | 3/2 split with image left, text right. |
-| Uneven split (3/2, image right) | `exp-layout exp-layout--split-uneven-3-2-right` | 3/2 split with image right, text left. |
-| Uneven split (2/3, image left) | `exp-layout exp-layout--split-uneven-2-3-left` | 2/3 split with image left, text right. |
-| Uneven split (2/3, image right) | `exp-layout exp-layout--split-uneven-2-3-right` | 2/3 split with image right, text left. |
+| Split (1/1) | `exp-layout exp-layout--split` | Two-column 1/1 layout. |
+| Uneven split (3/2) | `exp-layout exp-layout--split-uneven-3-2` | Two-column 3/2 layout. |
+| Uneven split (2/3) | `exp-layout exp-layout--split-uneven-2-3` | Two-column 2/3 layout. |
 | Stacked | `exp-layout exp-layout--stacked` | Single column; image(s) and text stack vertically. |
 
 ## Basic Markup Pattern
 
 ```html
-<section class="exp-layout exp-layout--split-left">
+<section class="exp-layout exp-layout--split">
   <figure class="exp-image">
     <img src="../i/xxxxx.webp" />
   </figure>
@@ -30,5 +28,6 @@ Use these classes on a container with `exp-layout`.
 ## Notes
 
 - Use `exp-image` for image containers and `exp-block` for text.
+- For split layouts, HTML order controls placement: first child is left column, second child is right column.
 - Split layouts are full-height (`100dvh`) and go full-width.
 - On smaller screens, split layouts collapse to a single column.
