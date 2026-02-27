@@ -2,7 +2,7 @@
   --color-bg: #ffffff;
   --color-link: #1a0dab;
   --color-link-active-bg: #000000;
-  --color-link-active-text: #ffffff;
+  --color-link-active-text: #000000;
   --color-muted: #666666;
   --color-text: #111111;
 
@@ -204,7 +204,7 @@ a:focus-visible {
   margin: 0;
 }
 
-.exp-image > a {
+.exp-image>a {
   display: flex;
   width: 100%;
   height: 100%;
