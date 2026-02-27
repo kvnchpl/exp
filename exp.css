@@ -214,6 +214,15 @@ a:focus-visible {
   text-decoration: none;
 }
 
+.exp-image>a :is(img, video) {
+  transition: opacity var(--transition-fast);
+}
+
+.exp-image>a:hover :is(img, video),
+.exp-image>a:focus-visible :is(img, video) {
+  opacity: 0;
+}
+
 .exp-image :is(img, video) {
   display: block;
   width: 100%;
