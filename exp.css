@@ -183,6 +183,7 @@ a:focus-visible {
   height: auto;
   max-width: var(--size-viewport-width);
   max-height: var(--size-viewport-height);
+  object-position: top center;
 }
 
 @media (max-width: 640px) {
