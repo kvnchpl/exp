@@ -116,9 +116,10 @@ a:focus-visible {
 .exp-layout {
   --layout-cols: 1fr;
   --layout-min-height: auto;
-  --media-fit-height: auto;
+  --media-fit-width: 100%;
+  --media-fit-height: 100%;
   --media-min-height: 0;
-  --media-object-fit: fill;
+  --media-object-fit: contain;
 
   display: grid;
   grid-template-columns: var(--layout-cols);
@@ -148,9 +149,6 @@ a:focus-visible {
 
 .exp-layout--split {
   --layout-min-height: var(--size-viewport-height);
-  --media-fit-height: 100%;
-  --media-min-height: var(--size-viewport-height);
-  --media-object-fit: cover;
 }
 
 .exp-layout--split .exp-block {
@@ -164,6 +162,12 @@ a:focus-visible {
 .exp-layout .exp-image,
 .exp-layout .exp-block {
   padding: var(--space-item-pad-half);
+}
+
+.exp-layout .exp-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .exp-image {
@@ -189,6 +193,7 @@ a:focus-visible {
 }
 
 .exp-layout .exp-image :is(img, video) {
+  width: var(--media-fit-width);
   height: var(--media-fit-height);
   min-height: var(--media-min-height);
   object-fit: var(--media-object-fit);
