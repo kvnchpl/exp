@@ -199,6 +199,16 @@ a:focus-visible {
   margin: 0;
 }
 
+.exp-image > a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  text-decoration: none;
+}
+
 .exp-image :is(img, video) {
   display: block;
   width: 100%;
