@@ -114,42 +114,51 @@ a:focus-visible {
 }
 
 .exp-layout {
+  --layout-cols: 1fr;
+  --layout-min-height: auto;
+  --media-fit-height: auto;
+  --media-min-height: 0;
+  --media-object-fit: fill;
+
   display: grid;
+  grid-template-columns: var(--layout-cols);
+  min-height: var(--layout-min-height);
   gap: 0;
   align-items: stretch;
   padding: var(--space-item-pad-half);
 }
 
 .exp-layout--index {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  --layout-cols: repeat(2, minmax(0, 1fr));
+  --layout-min-height: var(--size-viewport-height);
   align-items: start;
 }
 
-.exp-layout--split,
-.exp-layout--split-uneven-3-2,
-.exp-layout--split-uneven-2-3,
-.exp-layout--index {
-  min-height: var(--size-viewport-height);
+.exp-layout--split {
+  --layout-cols: repeat(2, minmax(0, 1fr));
+}
+
+.exp-layout--ratio-3-2 {
+  --layout-cols: 3fr 2fr;
+}
+
+.exp-layout--ratio-2-3 {
+  --layout-cols: 2fr 3fr;
 }
 
 .exp-layout--split {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  --layout-min-height: var(--size-viewport-height);
+  --media-fit-height: 100%;
+  --media-min-height: var(--size-viewport-height);
+  --media-object-fit: cover;
 }
 
-.exp-layout--split-uneven-3-2 {
-  grid-template-columns: 3fr 2fr;
-}
-
-.exp-layout--split-uneven-2-3 {
-  grid-template-columns: 2fr 3fr;
-}
-
-:is(.exp-layout--split, .exp-layout--split-uneven-3-2, .exp-layout--split-uneven-2-3) .exp-block {
+.exp-layout--split .exp-block {
   padding-top: 0;
 }
 
 .exp-layout--stacked {
-  grid-template-columns: 1fr;
+  --layout-cols: 1fr;
 }
 
 .exp-layout .exp-image,
@@ -179,10 +188,10 @@ a:focus-visible {
   object-position: top center;
 }
 
-:is(.exp-layout--split, .exp-layout--split-uneven-3-2, .exp-layout--split-uneven-2-3) .exp-image :is(img, video) {
-  height: 100%;
-  min-height: var(--size-viewport-height);
-  object-fit: cover;
+.exp-layout .exp-image :is(img, video) {
+  height: var(--media-fit-height);
+  min-height: var(--media-min-height);
+  object-fit: var(--media-object-fit);
 }
 
 @media (max-width: 640px) {
@@ -195,15 +204,13 @@ a:focus-visible {
   }
 
   .exp-layout--split,
-  .exp-layout--split-uneven-3-2,
-  .exp-layout--split-uneven-2-3,
   .exp-layout--index {
-    grid-template-columns: 1fr;
-    min-height: auto;
+    --layout-cols: 1fr;
+    --layout-min-height: auto;
   }
 
-  :is(.exp-layout--split, .exp-layout--split-uneven-3-2, .exp-layout--split-uneven-2-3) .exp-image :is(img, video) {
-    min-height: var(--min-image-height-mobile);
+  .exp-layout--split .exp-image :is(img, video) {
+    --media-min-height: var(--min-image-height-mobile);
   }
 
   .exp-layout .exp-image,
