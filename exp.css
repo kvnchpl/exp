@@ -166,7 +166,7 @@ a:focus-visible {
 
 .exp-layout .exp-image {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
@@ -197,6 +197,7 @@ a:focus-visible {
   height: var(--media-fit-height);
   min-height: var(--media-min-height);
   object-fit: var(--media-object-fit);
+  object-position: top center;
 }
 
 @media (max-width: 640px) {
