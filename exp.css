@@ -169,13 +169,14 @@ a:focus-visible {
 .exp-layout--image-grid .exp-image {
   align-items: center;
   justify-content: center;
+  height: 100%;
   min-width: 0;
   min-height: 0;
 }
 
 .exp-layout--image-grid .exp-image :is(img, video) {
-  --media-fit-width: auto;
-  --media-fit-height: auto;
+  --media-fit-width: 100%;
+  --media-fit-height: 100%;
   --media-object-fit: contain;
 }
 
@@ -225,8 +226,8 @@ a:focus-visible {
 }
 
 .exp-layout.exp-layout--image-grid .exp-image :is(img, video) {
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
