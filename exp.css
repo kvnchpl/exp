@@ -123,33 +123,28 @@ a:focus-visible {
 .exp-layout--index {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: start;
+}
+
+.exp-layout--split,
+.exp-layout--split-uneven-3-2,
+.exp-layout--split-uneven-2-3,
+.exp-layout--index {
   min-height: var(--size-viewport-height);
 }
 
 .exp-layout--split {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  min-height: var(--size-viewport-height);
-}
-
-.exp-layout--split .exp-image :is(img, video) {
-  height: 100%;
-  min-height: var(--size-viewport-height);
-  object-fit: cover;
 }
 
 .exp-layout--split-uneven-3-2 {
   grid-template-columns: 3fr 2fr;
-  min-height: var(--size-viewport-height);
 }
 
 .exp-layout--split-uneven-2-3 {
   grid-template-columns: 2fr 3fr;
-  min-height: var(--size-viewport-height);
 }
 
-.exp-layout--split .exp-block,
-.exp-layout--split-uneven-3-2 .exp-block,
-.exp-layout--split-uneven-2-3 .exp-block {
+:is(.exp-layout--split, .exp-layout--split-uneven-3-2, .exp-layout--split-uneven-2-3) .exp-block {
   padding-top: 0;
 }
 
@@ -166,24 +161,28 @@ a:focus-visible {
   margin: 0;
 }
 
-.exp-image img {
+.exp-image :is(img, video) {
   display: block;
   width: 100%;
   height: auto;
   max-width: var(--size-viewport-width);
   max-height: var(--size-viewport-height);
+}
+
+.exp-image img {
   pointer-events: none;
   user-select: none;
   -webkit-user-drag: none;
 }
 
 .exp-image video {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-width: var(--size-viewport-width);
-  max-height: var(--size-viewport-height);
   object-position: top center;
+}
+
+:is(.exp-layout--split, .exp-layout--split-uneven-3-2, .exp-layout--split-uneven-2-3) .exp-image :is(img, video) {
+  height: 100%;
+  min-height: var(--size-viewport-height);
+  object-fit: cover;
 }
 
 @media (max-width: 640px) {
@@ -203,9 +202,7 @@ a:focus-visible {
     min-height: auto;
   }
 
-  .exp-layout--split .exp-image :is(img, video),
-  .exp-layout--split-uneven-3-2 .exp-image :is(img, video),
-  .exp-layout--split-uneven-2-3 .exp-image :is(img, video) {
+  :is(.exp-layout--split, .exp-layout--split-uneven-3-2, .exp-layout--split-uneven-2-3) .exp-image :is(img, video) {
     min-height: var(--min-image-height-mobile);
   }
 
