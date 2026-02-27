@@ -1,6 +1,8 @@
 :root {
   --color-bg: #ffffff;
   --color-link: #1a0dab;
+  --color-link-active-bg: #000000;
+  --color-link-active-text: #ffffff;
   --color-muted: #666666;
   --color-text: #111111;
 
@@ -47,18 +49,21 @@ a {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
-  transition: color var(--transition-fast);
+  transition: color var(--transition-fast), background-color var(--transition-fast);
 }
 
 a:hover,
-a:focus,
 a:focus-visible {
-  color: var(--color-muted);
+  color: var(--color-link-active-text);
+  background-color: var(--color-link-active-bg);
+  text-decoration: none;
+  outline: none;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 a:focus-visible {
-  outline: 2px solid var(--color-text);
-  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--color-link-active-bg);
 }
 
 .exp-shell {
