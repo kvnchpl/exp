@@ -132,8 +132,8 @@ a:focus-visible {
   min-height: var(--size-viewport-height);
 }
 
-.exp-layout--split-left .exp-image img,
-.exp-layout--split-right .exp-image img {
+.exp-layout--split-left .exp-image :is(img, video),
+.exp-layout--split-right .exp-image :is(img, video) {
   height: 100%;
   min-height: var(--size-viewport-height);
   object-fit: cover;
@@ -203,6 +203,14 @@ a:focus-visible {
   -webkit-user-drag: none;
 }
 
+.exp-image video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: var(--size-viewport-width);
+  max-height: var(--size-viewport-height);
+}
+
 @media (max-width: 640px) {
   .exp-shell {
     padding: calc(var(--space-page) - 12px) var(--space-page-x) calc(var(--space-page-bottom) - 16px);
@@ -232,12 +240,12 @@ a:focus-visible {
     grid-column: auto;
   }
 
-  .exp-layout--split-left .exp-image img,
-  .exp-layout--split-right .exp-image img,
-  .exp-layout--split-uneven-3-2-left .exp-image img,
-  .exp-layout--split-uneven-3-2-right .exp-image img,
-  .exp-layout--split-uneven-2-3-left .exp-image img,
-  .exp-layout--split-uneven-2-3-right .exp-image img {
+  .exp-layout--split-left .exp-image :is(img, video),
+  .exp-layout--split-right .exp-image :is(img, video),
+  .exp-layout--split-uneven-3-2-left .exp-image :is(img, video),
+  .exp-layout--split-uneven-3-2-right .exp-image :is(img, video),
+  .exp-layout--split-uneven-2-3-left .exp-image :is(img, video),
+  .exp-layout--split-uneven-2-3-right .exp-image :is(img, video) {
     min-height: var(--min-image-height-mobile);
   }
 
