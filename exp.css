@@ -236,7 +236,7 @@ a:focus-visible {
 
 @media (max-width: 900px) {
   .exp-layout--image-grid {
-    --layout-cols: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -256,7 +256,7 @@ a:focus-visible {
   }
 
   .exp-layout--image-grid {
-    --layout-cols: 1fr;
+    grid-template-columns: 1fr;
   }
 
   .exp-layout--split .exp-image :is(img, video) {
