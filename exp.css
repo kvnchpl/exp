@@ -134,14 +134,9 @@ a:focus-visible {
   padding: var(--space-item-pad-half);
 }
 
-.exp-layout--index {
-  --layout-cols: repeat(2, minmax(0, 1fr));
-  --layout-min-height: var(--size-viewport-height);
-  align-items: start;
-}
-
 .exp-layout--split {
   --layout-cols: repeat(2, minmax(0, 1fr));
+  align-items: start;
 }
 
 .exp-layout--ratio-3-2 {
@@ -273,8 +268,7 @@ a:focus-visible {
     gap: var(--space-header-gap);
   }
 
-  .exp-layout--split,
-  .exp-layout--index {
+  .exp-layout--split {
     --layout-cols: 1fr;
     --layout-min-height: auto;
   }
