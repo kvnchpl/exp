@@ -25,18 +25,6 @@ async function renderPageList(target) {
 }
 
 async function getPageIds(directory) {
-    const fromDirectoryIndex = await getPageIdsFromDirectoryIndex(directory);
-
-    if (fromDirectoryIndex.length > 0) {
-        if (debugPages) {
-            console.info("Page list source: directory index", {
-                directory,
-                count: fromDirectoryIndex.length,
-            });
-        }
-        return fromDirectoryIndex;
-    }
-
     const manifestPath = "exp.json";
     const fromManifest = await getPageIdsFromManifest(manifestPath);
 
@@ -48,6 +36,18 @@ async function getPageIds(directory) {
             });
         }
         return fromManifest;
+    }
+
+    const fromDirectoryIndex = await getPageIdsFromDirectoryIndex(directory);
+
+    if (fromDirectoryIndex.length > 0) {
+        if (debugPages) {
+            console.info("Page list source: directory index", {
+                directory,
+                count: fromDirectoryIndex.length,
+            });
+        }
+        return fromDirectoryIndex;
     }
 
     if (debugPages) {
