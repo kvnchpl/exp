@@ -36,23 +36,8 @@ if (idTarget) {
     : title;
 
   idTarget.textContent = pageId;
-  idTarget.style.cursor = "pointer";
-  idTarget.title = "Back to homepage";
-  idTarget.setAttribute("role", "link");
-  idTarget.setAttribute("tabindex", "0");
-
-  const goHome = () => {
-    window.location.assign(new URL("../index.html", window.location.href));
-  };
-
-  idTarget.addEventListener("click", () => {
-    goHome();
-  });
-
-  idTarget.addEventListener("keydown", (event) => {
-    if (event.key === "Enter" || event.key === " ") {
-      event.preventDefault();
-      goHome();
-    }
-  });
+  if (idTarget instanceof HTMLAnchorElement) {
+    idTarget.href = new URL("../index.html", window.location.href).href;
+    idTarget.title = "Back to homepage";
+  }
 }
