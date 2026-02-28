@@ -37,7 +37,7 @@ if (idTarget) {
 
   idTarget.textContent = pageId;
   if (idTarget instanceof HTMLAnchorElement) {
-    idTarget.href = new URL("../index.html", window.location.href).href;
+    idTarget.href = new URL("../", window.location.href).href;
     idTarget.title = "Back to homepage";
   }
 }
