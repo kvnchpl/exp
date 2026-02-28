@@ -37,7 +37,7 @@ async function getPageIds(directory) {
         return fromDirectoryIndex;
     }
 
-    const manifestPath = `${directory}pages.json`;
+    const manifestPath = "pages.json";
     const fromManifest = await getPageIdsFromManifest(manifestPath);
 
     if (fromManifest.length > 0) {
