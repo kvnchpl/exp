@@ -160,6 +160,18 @@ a:focus-visible {
   --layout-cols: 1fr;
 }
 
+.exp-layout--narrow {
+  max-width: 900px;
+}
+
+.exp-page-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
 .exp-layout--image-grid {
   --layout-cols: repeat(3, minmax(0, 1fr));
   --layout-min-height: auto;
