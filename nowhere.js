@@ -3,7 +3,7 @@ const list = document.querySelector(".exp-page-list");
 if (list) {
     renderPageList(list).catch((error) => {
         console.error("Failed to render page list.", error);
-        list.innerHTML = "<li>Unable to load page list.</li>";
+        list.innerHTML = "<li>error</li>";
     });
 }
 
@@ -12,7 +12,7 @@ async function renderPageList(target) {
     const pageIds = await getPageIds(directory);
 
     if (pageIds.length === 0) {
-        target.innerHTML = "<li>No pages found.</li>";
+        target.innerHTML = "<li>nothing</li>";
         return;
     }
 
