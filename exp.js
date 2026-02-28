@@ -13,6 +13,8 @@ function isPlainLeftClick(event) {
 }
 
 if (returnLink) {
+  returnLink.tabIndex = 1;
+
   returnLink.addEventListener("click", (event) => {
     if (!isPlainLeftClick(event)) {
       return;
@@ -30,6 +32,8 @@ if (returnLink) {
 }
 
 if (idTarget) {
+  idTarget.tabIndex = 2;
+
   const title = document.title.trim();
   const pageId = title.startsWith(TITLE_PREFIX)
     ? title.slice(TITLE_PREFIX.length)
