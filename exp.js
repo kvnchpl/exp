@@ -36,7 +36,4 @@ if (idTarget) {
     : title;
 
   idTarget.textContent = pageId;
-  if (idTarget instanceof HTMLAnchorElement) {
-    idTarget.href = new URL("../", window.location.href).href;
-  }
 }
