@@ -99,7 +99,8 @@ a:focus-visible {
   color: var(--color-muted);
 }
 
-.exp-return {
+.exp-return,
+.exp-page-id {
   color: var(--color-text);
   font-weight: 700;
   text-transform: uppercase;
