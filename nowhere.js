@@ -38,20 +38,8 @@ async function getPageIds(directory) {
         return fromManifest;
     }
 
-    const fromDirectoryIndex = await getPageIdsFromDirectoryIndex(directory);
-
-    if (fromDirectoryIndex.length > 0) {
-        if (debugPages) {
-            console.info("Page list source: directory index", {
-                directory,
-                count: fromDirectoryIndex.length,
-            });
-        }
-        return fromDirectoryIndex;
-    }
-
     if (debugPages) {
-        console.warn("No pages discovered.", { directory, manifestPath });
+        console.warn("No pages discovered.", { manifestPath });
     }
 
     return [];
@@ -59,30 +47,6 @@ async function getPageIds(directory) {
 
 function normalizeDirectory(directory) {
     return directory.endsWith("/") ? directory : `${directory}/`;
-}
-
-async function getPageIdsFromDirectoryIndex(directory) {
-    try {
-        const response = await fetch(directory, { cache: "no-store" });
-
-        if (!response.ok) {
-            if (debugPages) {
-                console.warn("Directory listing request failed.", {
-                    directory,
-                    status: response.status,
-                });
-            }
-            return [];
-        }
-
-        const html = await response.text();
-        return parsePageIdsFromHtml(html);
-    } catch (error) {
-        if (debugPages) {
-            console.warn("Directory listing request errored.", { directory, error });
-        }
-        return [];
-    }
 }
 
 async function getPageIdsFromManifest(manifestPath) {
@@ -123,20 +87,6 @@ async function getPageIdsFromManifest(manifestPath) {
         }
         return [];
     }
-}
-
-function parsePageIdsFromHtml(html) {
-    const documentFragment = new DOMParser().parseFromString(html, "text/html");
-    const links = [...documentFragment.querySelectorAll("a[href]")];
-    const ids = links
-        .map((link) => link.getAttribute("href") || "")
-        .map((href) => href.trim())
-        .filter((href) => href.endsWith(".html"))
-        .map((href) => href.split("/").pop() || "")
-        .map((fileName) => fileName.replace(/\.html$/i, ""))
-        .filter(Boolean);
-
-    return uniqueSorted(ids);
 }
 
 function uniqueSorted(values) {
